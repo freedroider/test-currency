@@ -22,8 +22,8 @@ class ConverterActivity : BaseActivity() {
             override fun afterTextChanged(text: Editable) {
                 converterViewModel.requestConverterRate(
                     etBaseCurrency.text(),
-                    tvRequiredCurrencyLabel.text as String,
-                    tvBaseCurrencyLabel.text as String
+                    tvRequiredCurrencyLabel.text.toString(),
+                    tvBaseCurrencyLabel.text.toString()
                 )
             }
 
@@ -34,7 +34,9 @@ class ConverterActivity : BaseActivity() {
 
         observingAction(
             converterViewModel.converterRateLD,
-            { etRequiredCurrency.text = SpannableStringBuilder(it) }
+            {
+                etRequiredCurrency.text = SpannableStringBuilder(it)
+            }
         )
     }
 }

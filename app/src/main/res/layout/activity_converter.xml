@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:textSize="36sp"
+                android:inputType="number"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/tvBaseCurrencyLabel"
                 app:layout_constraintStart_toStartOf="parent"
